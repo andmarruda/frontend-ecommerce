@@ -1,11 +1,8 @@
-# frontend-ecommerce
-Improving portfolio using figma template and translating it to React
-This time i will study and improve my portfolio using this figma's layout and translating it
-to React.
+# React + Vite
 
-https://www.freefigmatemplates.com/gallery/fast-fashion-shop-site
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Thanks to the author Hamza Naeem for this beautiful figma's layout and let's test
-my skill.
+Currently, two official plugins are available:
 
-Soon i will show prints and videos of it running.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
