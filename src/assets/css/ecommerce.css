@@ -24,6 +24,11 @@ header {
     width: 100%;
 }
 
+.btn {
+    border-radius: 5rem !important;
+    padding: 0.5rem 1.5rem !important;
+}
+
 header input {
     background: #F0F0F0 !important;
     border-radius: 5rem !important;
@@ -31,11 +36,12 @@ header input {
 
 header input, ::placeholder {
     color: rgba(0,0,0,0.4) !important;
+    transition: all 0.3s ease-in;
 }
 
 header input:focus, header input:hover {
     outline: 1px solid rgba(0,0,0,0.4) !important;
-    box-shadow: none !important;
+    box-shadow: 0 0 0 2px rgba(0,0,0,0.1) !important;
     border: 0 none;
 }
 
@@ -75,4 +81,13 @@ header .search {
 
 header .icons {
     margin-left: 1rem;
+}
+
+header .icons a svg, header .icons a svg *{
+    fill: rgba(0,0,0,0.6);
+    transition: all 0.3s ease-in;
+}
+
+header .icons a:hover svg, header .icons a:hover svg *{
+    fill: rgba(0,0,0,1);
 }
