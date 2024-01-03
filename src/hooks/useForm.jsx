@@ -24,7 +24,7 @@ const useForm = (validationType) => {
         return true;
     }
 
-    const handleChange = ({target}) => {
+    const onChange = ({target}) => {
         if(error) validate(target.value);
         setValue(target.value);
     }
@@ -33,7 +33,7 @@ const useForm = (validationType) => {
         value,
         setValue,
         error,
-        onChange:  (event) => handleChange(event),
+        onChange,
         validate: () => validate(value),
         onBlur: () => validate(value)
     }

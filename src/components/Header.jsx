@@ -4,9 +4,11 @@ import Input from "./Input";
 import CartIcon from "../assets/icons/cart.svg?react";
 import UserIcon from "../assets/icons/user.svg?react";
 import { useTranslation } from "react-i18next";
+import useForm from "../hooks/useForm";
 
 const Header = () => {
     const { t } = useTranslation();
+    const searchInput = useForm();
 
     return (
         <header>
@@ -40,7 +42,7 @@ const Header = () => {
                             </li>
                         </ul>
                         <form className="search" role="search">
-                            <Input className="form-control" type="text" placeholder={t('searchPlaceholder')} />
+                            <Input className="form-control" type="text" placeholder={t('searchPlaceholder')} id="search" name="search" {...searchInput} />
                         </form>
                         <ul className="navbar-nav icons">
                             <li className="nav-item">

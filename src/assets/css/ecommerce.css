@@ -9,6 +9,11 @@ body {
     font-family: 'Roboto' sans-serif !important;
 }
 
+.container-padding {
+    margin: 0;
+    padding: 0 100px;
+}
+
 a, a:hover, a:active, a:focus {
     text-decoration: none;
 }

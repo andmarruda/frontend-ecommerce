@@ -1,7 +1,7 @@
-import { API_URL } from "./Url";
+import { API_URL, getLocale } from "./Url";
 
 export const getBanners = () => {
-    const fullUrl = API_URL + 'banners';
+    const fullUrl = `${API_URL}${getLocale()}/banners`;
 
     return {
         url: fullUrl,
@@ -13,18 +13,20 @@ export const getBanners = () => {
             "subtitle": "Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.",
             "image": "",
             "path": "/",
-            "brands": {
-                "count": 200,
-                "label": "International Brands"
-            },
-            "products": {
-                "count": 2000,
-                "label": "High Quality Products"
-            },
-            "customers": {
-                "count": 30000,
-                "label": "Happy Customers"
-            }
+            "tips": [
+                {
+                    "count": 200,
+                    "label": "International Brands"
+                },
+                {
+                    "count": 2000,
+                    "label": "High Quality Products"
+                },
+                {
+                    "count": 30000,
+                    "label": "Happy Customers"
+                }
+            ]
         }
     };
 }

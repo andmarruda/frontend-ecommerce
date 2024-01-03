@@ -1,9 +1,8 @@
 import React from "react";
 
-const Input = ({name, value, ...attributes}) => {
-    const [inputValue, setInputValue] = React.useState(value ?? '');
+const Input = ({name, id, value, ...attributes}) => {
     return (
-        <input name={name} {...attributes} value={inputValue} onChange={({target}) => setInputValue(target.value)} />
+        <input name={name} id={id} {...attributes} />
     )
 }
 

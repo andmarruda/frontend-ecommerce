@@ -1,0 +1,12 @@
+.brands {
+    padding-top: 44px;
+    padding-bottom: 44px;
+
+    background: #000 !important;
+    color: #fff !important;
+}
+
+.brands h1 {
+    font-size: 50px !important;
+    margin: 0 !important;
+}

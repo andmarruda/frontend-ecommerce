@@ -17,7 +17,7 @@ const Banner = () => {
     }, []);
 
     return (
-        <div className="container-fluid banner">
+        <div className="container-fluid banner container-padding">
             <div className="row">
                 <div className="col-6">
                     <h1>{isLoading ? <Skeleton /> : data.title}</h1>
@@ -27,20 +27,12 @@ const Banner = () => {
                     { isLoading ? <Skeleton /> : <Link to="/" className="btn btn-dark" role="button">Shop Now</Link> }
 
                     <div className="d-flex justify-content-between tips">
-                        <div>
-                            <h3>200+</h3>
-                            <p>International Brands</p>
-                        </div>
-
-                        <div>
-                            <h3>2,000+</h3>
-                            <p>High Quality Products</p>
-                        </div>
-
-                        <div>
-                            <h3>30,000+</h3>
-                            <p>Happy Customers</p>
-                        </div>
+                        { isLoading ? <Skeleton /> : data.tips.map((tip, index) => (
+                            <div key={index}>
+                                <h3>{tip.count}+</h3>
+                                <p>{tip.label}</p>
+                            </div>
+                        )) }
                     </div>
                 </div>
 
