@@ -3,8 +3,11 @@ import { Link } from "react-router-dom";
 import Input from "./Input";
 import CartIcon from "../assets/icons/cart.svg?react";
 import UserIcon from "../assets/icons/user.svg?react";
+import { useTranslation } from "react-i18next";
 
 const Header = () => {
+    const { t } = useTranslation();
+
     return (
         <header>
             <div className="top">
@@ -19,25 +22,25 @@ const Header = () => {
                     <div className="collapse navbar-collapse" id="ecommerceMenu">
                         <ul className="navbar-nav">
                             <li className="nav-item dropdown">
-                                <Link className="nav-link dropdown-toggle" to="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</Link>
+                                <Link className="nav-link dropdown-toggle" to="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">{t('shop')}</Link>
                                 <ul className="dropdown-menu">
-                                    <li><a className="dropdown-item" href="#">Category 1</a></li>
-                                    <li><a className="dropdown-item" href="#">Category 2</a></li>
-                                    <li><a className="dropdown-item" href="#">Category 3</a></li>
+                                    <li><Link className="dropdown-item" to="#">{t('category')} 1</Link></li>
+                                    <li><Link className="dropdown-item" href="#">{t('category')} 2</Link></li>
+                                    <li><Link className="dropdown-item" href="#">{t('category')} 3</Link></li>
                                 </ul>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/" role="button">On Sale</Link>
+                                <Link className="nav-link" to="/" role="button">{t('onSale')}</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/" role="button">New Arrivals</Link>
+                                <Link className="nav-link" to="/" role="button">{t('newArrivals')}</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/" role="button">Brands</Link>
+                                <Link className="nav-link" to="/" role="button">{t('brands')}</Link>
                             </li>
                         </ul>
                         <form className="search" role="search">
-                            <Input className="form-control" value="123" type="text" placeholder="Search for products..." aria-label="readonly input example" />
+                            <Input className="form-control" type="text" placeholder={t('searchPlaceholder')} />
                         </form>
                         <ul className="navbar-nav icons">
                             <li className="nav-item">
