@@ -37,11 +37,6 @@ header input:focus, header input:active, header input:hover {
     outline: none !important;
 }
 
-header input:before {
-    content: url(../assets/images/search.svg);
-    width: 100px;
-}
-
 header .top {
     height: var(--var-top-height);
     background-color: var(--var-top-bgcolor);
