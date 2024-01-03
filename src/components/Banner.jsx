@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import '../assets/css/banner.css';
+import BannerImage from '../assets/banners/banner-1.webp';
 
 const Banner = () => {
     return (
@@ -31,8 +32,8 @@ const Banner = () => {
                     </div>
                 </div>
 
-                <div className="col-6">
-                    
+                <div className="col-6 align-self-end">
+                    <img src={BannerImage} alt="Banner" className="img-fluid" />
                 </div>
             </div>
         </div>

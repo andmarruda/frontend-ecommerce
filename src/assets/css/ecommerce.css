@@ -30,7 +30,8 @@ header {
 }
 
 header input {
-    background: #F0F0F0 !important;
+    background: url('../icons/search.svg') 1rem center no-repeat #F0F0F0 !important;
+    padding-left: 3.2rem !important;
     border-radius: 5rem !important;
 }
 
