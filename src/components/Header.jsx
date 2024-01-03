@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Input from "./Input";
+import CartIcon from "../assets/icons/cart.svg?react";
+import UserIcon from "../assets/icons/user.svg?react";
 
 const Header = () => {
     return (
@@ -19,9 +21,9 @@ const Header = () => {
                             <li className="nav-item dropdown">
                                 <Link className="nav-link dropdown-toggle" to="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</Link>
                                 <ul className="dropdown-menu">
-                                    <li><a className="dropdown-item" href="#">Action</a></li>
-                                    <li><a className="dropdown-item" href="#">Another action</a></li>
-                                    <li><a className="dropdown-item" href="#">Something else here</a></li>
+                                    <li><a className="dropdown-item" href="#">Category 1</a></li>
+                                    <li><a className="dropdown-item" href="#">Category 2</a></li>
+                                    <li><a className="dropdown-item" href="#">Category 3</a></li>
                                 </ul>
                             </li>
                             <li className="nav-item">
@@ -33,8 +35,16 @@ const Header = () => {
                             <li className="nav-item">
                                 <Link className="nav-link" to="/" role="button">Brands</Link>
                             </li>
+                        </ul>
+                        <form className="search" role="search">
+                            <Input className="form-control" value="123" type="text" placeholder="Search for products..." aria-label="readonly input example" />
+                        </form>
+                        <ul className="navbar-nav icons">
                             <li className="nav-item">
-                                <Input className="form-control" value="123" type="text" placeholder="Search for products..." aria-label="readonly input example" />
+                                <Link className="nav-link" to="/" role="button"><CartIcon /></Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/" role="button"><UserIcon /></Link>
                             </li>
                         </ul>
                     </div>

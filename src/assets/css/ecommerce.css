@@ -33,8 +33,10 @@ header input, ::placeholder {
     color: rgba(0,0,0,0.4) !important;
 }
 
-header input:focus, header input:active, header input:hover {
-    outline: none !important;
+header input:focus, header input:hover {
+    outline: 1px solid rgba(0,0,0,0.4) !important;
+    box-shadow: none !important;
+    border: 0 none;
 }
 
 header .top {
@@ -64,4 +66,13 @@ header .ecommerce-navbar .navbar-brand {
     font-weight: 900;
     color: var(--var-dark-color);
     font-size: var(--ama-navbar-brand-font-size);
+}
+
+header .search {
+    margin-left: 2rem;
+    flex-grow: 1;
+}
+
+header .icons {
+    margin-left: 1rem;
 }
