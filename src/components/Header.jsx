@@ -41,10 +41,10 @@ const Header = () => {
                         </form>
                         <ul className="navbar-nav icons">
                             <li className="nav-item">
-                                <Link className="nav-link" to="/" role="button"><CartIcon /></Link>
+                                <Link className="nav-link" to="/cart" role="button"><CartIcon /></Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/" role="button"><UserIcon /></Link>
+                                <Link className="nav-link" to="/login" role="button"><UserIcon /></Link>
                             </li>
                         </ul>
                     </div>
