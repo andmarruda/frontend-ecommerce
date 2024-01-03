@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&family=Roboto:wght@400;500;900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    --var-light-color: #eee;
+    --var-light-color-hover: #ccc;
+    --var-dark-color: #000;
+    font-family: 'Roboto' sans-serif !important;
+}
+
+a, a:hover, a:active, a:focus {
+    text-decoration: none;
+}
+
+header {
+    --var-top-height: 2.375rem;
+    --var-top-bgcolor: #000;
+    --var-top-lineHeight: 2.735rem;
+    --var-top-fontSize: 0.875rem;
+    --bs-navbar-brand-font-size: 2rem;
+    --ama-navbar-padding-y: 1.5rem;
+    --ama-navbar-brand-font-size: 1.75rem;
+    width: 100%;
+}
+
+header input {
+    background: #F0F0F0 !important;
+    border-radius: 5rem !important;
+}
+
+header input, ::placeholder {
+    color: rgba(0,0,0,0.4) !important;
+}
+
+header input:focus, header input:active, header input:hover {
+    outline: none !important;
+}
+
+header input:before {
+    content: url(../assets/images/search.svg);
+    width: 100px;
+}
+
+header .top {
+    height: var(--var-top-height);
+    background-color: var(--var-top-bgcolor);
+    line-height: var(--var-top-lineHeight);
+    font-size: var(--var-top-fontSize);
+    text-align: center;
+    color: var(--var-light-color);
+}
+
+header .top a {
+    color: var(--var-light-color);
+}
+
+header .top a:hover {
+    color: var(--var-light-color-hover);
+}
+
+header .ecommerce-navbar {
+    width: calc(100% - 200px);
+    padding: var(--ama-navbar-padding-y) 0;
+    margin: 0 auto;
+}
+
+header .ecommerce-navbar .navbar-brand {
+    font-weight: 900;
+    color: var(--var-dark-color);
+    font-size: var(--ama-navbar-brand-font-size);
+}
