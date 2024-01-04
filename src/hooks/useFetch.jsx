@@ -7,7 +7,12 @@ const useFetch = (url, options, pattern) => {
     const Request = React.useCallback(async () => {
         setLoading(true);
         const response = await fetch(url, options);
-        if(!response.ok) setData(pattern);
+        if(!response.ok)
+        {
+            setData(pattern);
+            setLoading(false);
+            return;
+        }
 
         const json = await response.json();
         setData(json);
